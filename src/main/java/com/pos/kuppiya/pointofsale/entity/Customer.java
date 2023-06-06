@@ -18,15 +18,20 @@ public class Customer {
     @Column(name = "customer_id",length = 45)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int customerId;
+
     @Column(name = "customer_name",length = 100,nullable = false)
     private String customerName;
+
     @Column(name = "customer_address",length = 150)
     private String customerAddress;
+
     @Column(name = "customer_salary",length = 25)
     private double customerSalary;
+
     @Type(type = "json")
     @Column(name = "contact_numbers",columnDefinition = "json")
     private ArrayList contactNumbers;
+
     @Column(name = "nic",length = 12,unique = true)
     private String nic;
 
